@@ -1,1 +1,45 @@
-i am new page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>es6 learn</h2>>
+    <div>
+        <pre>
+            let{
+                (1. 块级作用域
+           var声明的变量由于不存在块级作用域所以可以在全局环境中调用，而let声明的变量由于存在块级作用域所以不能在全局环境中调用。
+                   Var w=[]
+                   For(let a=1, a<10, a++){w[a] = function(){console.log(a)}}
+                   W[3]:  console.log(3)
+           (2.不存在变量提升：let定义变量，只能先定义再使用
+           例如 console.log(f); let f = ‘f’;-----------------报错
+           （3.暂时性死区：
+           例如 var tmp=’12’; if(true){tmp=’abc’, let tmp}-----------------报错
+           (4.不允许重复声明：
+           Function(){let a=4; let a=5}--------------------报错
+           }
+           5.es6 const
+              　1.const声明常量，一旦声明，不可改变。
+                   Const a=10; a=100-----------------报错
+           3.	既然const一旦声明不可改变，所以在声明时必须初始化。
+           Const a; -----------------------报错
+           4.	const所在的代码块为块级作用域，所以其变量只在块级作用域内使用或其中的闭包使用。
+           5.	if(true){ const a=10; } console.log(a);----------------------》报错
+           6.	.const声明的变量不存在变量提升。If（true）{console.log(a); const a=10;}----报错
+           7.	const不可重复声明常量。Var a =10; const a=5;-------------报错
+           8.	const 命令只是保证了变量名指向的地址不变，并不能保证该地址的数据不变
+           一下情况是允许的：
+           Const a={}; a.name=’z’; console.log(a.name);
+           9.	如果希望对象本身冻结，可以使用Object.freeze()方法
+           例如：const a=object.freeze({});
+           a.	name=”a”; console.log(a.name)//undefined
+           于是通过Object.freeze()方法我们就不可以再改变对象的属性了（无效）。
+        </pre>
+    <div>
+</body>
+</html>
